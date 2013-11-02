@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PokeMiniLib", "PokeMiniLib\PokeMiniLib.vcxproj", "{18888667-6779-4548-B1FD-989801954DDE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PokeMiniEmulator", "PokeMiniEmulator\PokeMiniEmulator.vcxproj", "{BA44FC57-B2B4-4448-8144-4301309035D7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18888667-6779-4548-B1FD-989801954DDE} = {18888667-6779-4548-B1FD-989801954DDE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18888667-6779-4548-B1FD-989801954DDE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{18888667-6779-4548-B1FD-989801954DDE}.Debug|Win32.Build.0 = Debug|Win32
+		{18888667-6779-4548-B1FD-989801954DDE}.Release|Win32.ActiveCfg = Release|Win32
+		{18888667-6779-4548-B1FD-989801954DDE}.Release|Win32.Build.0 = Release|Win32
+		{BA44FC57-B2B4-4448-8144-4301309035D7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BA44FC57-B2B4-4448-8144-4301309035D7}.Debug|Win32.Build.0 = Debug|Win32
+		{BA44FC57-B2B4-4448-8144-4301309035D7}.Release|Win32.ActiveCfg = Release|Win32
+		{BA44FC57-B2B4-4448-8144-4301309035D7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

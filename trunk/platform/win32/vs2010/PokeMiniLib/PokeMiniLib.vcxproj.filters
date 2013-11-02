@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\Base">
+      <UniqueIdentifier>{c7ba6f03-326d-47ba-a509-54e0dd8d331a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\System">
+      <UniqueIdentifier>{d96addb5-14f8-465f-a2bc-09f84e4820ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Units">
+      <UniqueIdentifier>{40b84ec5-463f-4a79-8efe-229deda51395}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\GsKernelBaseType.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\GsKernelRenderType.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\GsKernelType.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\GsPokeMiniApi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IGsPmSystem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\KernelDef.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Base\PmBase.h">
+      <Filter>source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Base\PmHardRegMap.h">
+      <Filter>source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Base\PmMapper.h">
+      <Filter>source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Base\PmMemory.h">
+      <Filter>source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Base\PmRegMap.h">
+      <Filter>source\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\System\PmSystem.h">
+      <Filter>source\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\System\PmUnit.h">
+      <Filter>source\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Units\PmAudio.h">
+      <Filter>source\Units</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Units\PmCPU.h">
+      <Filter>source\Units</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Units\PmIO.h">
+      <Filter>source\Units</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Units\PmIRQ.h">
+      <Filter>source\Units</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Units\PmLCD.h">
+      <Filter>source\Units</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Units\PmPRC.h">
+      <Filter>source\Units</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Units\PmTimer.h">
+      <Filter>source\Units</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Base\GsPokeMiniApi.cpp">
+      <Filter>source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Base\PmBase.cpp">
+      <Filter>source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Base\PmMapper.cpp">
+      <Filter>source\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\System\PmSystem.cpp">
+      <Filter>source\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\System\PmUnit.cpp">
+      <Filter>source\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmAudio.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmCpu.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmCPU_CE.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmCPU_CF.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmCPU_XX.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmIO.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmIRQ.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmLCD.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmPRC.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Units\PmTimer.cpp">
+      <Filter>source\Units</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

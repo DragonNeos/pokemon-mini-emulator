@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\GsKernelBaseType.h" />
+    <ClInclude Include="..\..\..\..\include\GsKernelRenderType.h" />
+    <ClInclude Include="..\..\..\..\include\GsKernelType.h" />
+    <ClInclude Include="..\..\..\..\include\GsPokeMiniApi.h" />
+    <ClInclude Include="..\..\..\..\include\IGsPmSystem.h" />
+    <ClInclude Include="..\..\..\..\include\KernelDef.h" />
+    <ClInclude Include="..\..\..\..\source\Base\PmBase.h" />
+    <ClInclude Include="..\..\..\..\source\Base\PmHardRegMap.h" />
+    <ClInclude Include="..\..\..\..\source\Base\PmMapper.h" />
+    <ClInclude Include="..\..\..\..\source\Base\PmMemory.h" />
+    <ClInclude Include="..\..\..\..\source\Base\PmRegMap.h" />
+    <ClInclude Include="..\..\..\..\source\System\PmSystem.h" />
+    <ClInclude Include="..\..\..\..\source\System\PmUnit.h" />
+    <ClInclude Include="..\..\..\..\source\Units\PmAudio.h" />
+    <ClInclude Include="..\..\..\..\source\Units\PmCPU.h" />
+    <ClInclude Include="..\..\..\..\source\Units\PmIO.h" />
+    <ClInclude Include="..\..\..\..\source\Units\PmIRQ.h" />
+    <ClInclude Include="..\..\..\..\source\Units\PmLCD.h" />
+    <ClInclude Include="..\..\..\..\source\Units\PmPRC.h" />
+    <ClInclude Include="..\..\..\..\source\Units\PmTimer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Base\GsPokeMiniApi.cpp" />
+    <ClCompile Include="..\..\..\..\source\Base\PmBase.cpp" />
+    <ClCompile Include="..\..\..\..\source\Base\PmMapper.cpp" />
+    <ClCompile Include="..\..\..\..\source\System\PmSystem.cpp" />
+    <ClCompile Include="..\..\..\..\source\System\PmUnit.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmAudio.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmCpu.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmCPU_CE.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmCPU_CF.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmCPU_XX.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmIO.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmIRQ.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmLCD.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmPRC.cpp" />
+    <ClCompile Include="..\..\..\..\source\Units\PmTimer.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{18888667-6779-4548-B1FD-989801954DDE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PokeMiniLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\..\include;$(SolutionDir)\..\..\..\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\..\include;$(SolutionDir)\..\..\..\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -334,7 +334,7 @@ BOOL CPokeMiniEmulatorDlg::OnKeyUp(MSG* pMsg)
         case 'C':
             m_pSystem->OnKeyUp(IGsPmSystem::PM_KEY_C);
             return TRUE;
-        case 'W':
+        case 'E':
             m_pSystem->OnKeyUp(IGsPmSystem::PM_KEY_POWER);
             return TRUE;
         case 'A':
@@ -398,7 +398,7 @@ BOOL CPokeMiniEmulatorDlg::OnKeyDown(MSG* pMsg)
         case 'C':
             m_pSystem->OnKeyDown(IGsPmSystem::PM_KEY_C);
             return TRUE;
-        case 'W':
+        case 'E':
             m_pSystem->OnKeyDown(IGsPmSystem::PM_KEY_POWER);
             return TRUE;
         case 'A':

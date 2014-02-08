@@ -5,20 +5,6 @@
 #include <cstring> // for memset
 #include <stdio.h> // for FILE
 
-//===========================================================================
-
-const GS_UINT16 GS_UINT16_MAX = (GS_UINT16)(~((GS_UINT16)0));
-
-//===========================================================================
-
-#ifdef _WIN32
-#define GS_TYPEOF(x)    decltype(x)
-#else
-#define GS_TYPEOF(x)    typeof(x)
-#endif
-
-//===========================================================================
-
 template <typename T>
 inline T const & gs_max (T const &a, T const &b)
 {
@@ -37,106 +23,10 @@ inline GS_VOID gs_swap (T &a, T &b)
     T t = a; a = b; b = t;
 }
 
-template <typename T>
-inline GS_VOID gs_set_value (T *p, T const &value)
-{
-    if (p) { *p = value; }
-}
-
 //===========================================================================
 
 inline GS_VOID gs_zero(GS_VOID *pBuffer, GS_SIZE_T size) {
     memset(pBuffer, 0, size);
-}
-
-//===========================================================================
-
-inline GS_UINT16 GetU16BE(const GS_UINT8 *pSrc)
-{
-#ifdef BIG_ENDIAN
-    return *((GS_UINT16 *)pSrc);
-#else
-    return ((GS_UINT16)pSrc[0] << 8) 
-         + ((GS_UINT16)pSrc[1]     );
-#endif
-}
-
-inline GS_UINT16 GetU16LE(const GS_UINT8 *pSrc)
-{
-#ifdef BIG_ENDIAN
-    return ((GS_UINT16)pSrc[1] << 8) 
-         + ((GS_UINT16)pSrc[0]     );
-#else
-    return *((GS_UINT16 *)pSrc);
-#endif
-}
-
-inline GS_UINT32 GetU32BE(const GS_UINT8 *pSrc)
-{
-#ifdef BIG_ENDIAN
-    return *((GS_UINT32 *)pSrc);
-#else
-    return ((GS_UINT32)pSrc[0] << 24) 
-         + ((GS_UINT32)pSrc[1] << 16) 
-         + ((GS_UINT32)pSrc[2] <<  8) 
-         + ((GS_UINT32)pSrc[3]      );
-#endif
-}
-
-inline GS_UINT32 GetU32LE(const GS_UINT8 *pSrc)
-{
-#ifdef BIG_ENDIAN
-    return ((GS_UINT32)pSrc[3] << 24) 
-         + ((GS_UINT32)pSrc[2] << 16) 
-         + ((GS_UINT32)pSrc[1] <<  8) 
-         + ((GS_UINT32)pSrc[0]      );
-#else
-    return *((GS_UINT32 *)pSrc);
-#endif
-}
-
-inline GS_VOID PutU16BE(GS_UINT16 src, GS_UINT8 *pDest)
-{
-#ifdef BIG_ENDIAN
-    *((GS_UINT16 *)pDest) = src;
-#else
-    pDest[0] = (GS_UINT8)(src >> 8);
-    pDest[1] = (GS_UINT8)(src     );
-#endif
-}
-
-inline GS_VOID PutU16LE(GS_UINT16 src, GS_UINT8 *pDest)
-{
-#ifdef BIG_ENDIAN
-    pDest[1] = (GS_UINT8)(src >> 8);
-    pDest[0] = (GS_UINT8)(src     );
-#else
-    *((GS_UINT16 *)pDest) = src;
-#endif
-}
-
-inline GS_VOID PutU32BE(GS_UINT32 src, GS_UINT8 *pDest)
-{
-#ifdef BIG_ENDIAN
-    *((GS_UINT32 *)pDest) = src;
-#else
-    pDest[0] = (GS_UINT8)(src >> 24);
-    pDest[1] = (GS_UINT8)(src >> 16);
-    pDest[2] = (GS_UINT8)(src >>  8);
-    pDest[3] = (GS_UINT8)(src      );
-#endif
-}
-
-inline GS_VOID PutU32LE(GS_UINT32 src, GS_UINT8 *pDest)
-{
-#ifdef BIG_ENDIAN
-    pDest[3] = (GS_UINT8)(src >> 24);
-    pDest[2] = (GS_UINT8)(src >> 16);
-    pDest[1] = (GS_UINT8)(src >>  8);
-    pDest[0] = (GS_UINT8)(src      );
-#else
-    *((GS_UINT32 *)pDest) = src;
-#endif
 }
 
 //===========================================================================
@@ -217,35 +107,6 @@ private:
 
 #define GS_FREE_SCOPE(pBuffer)   GsFreeScope                       pBuffer##Scope(pBuffer)
 #define GS_DELETE_SCOPE(pBuffer) GsDeleteScope<GS_TYPEOF(pBuffer)> pBuffer##Scope(pBuffer)
-
-//===========================================================================
-
-const GS_FLOAT GS_FLOAT_DELTA = 0.0001f;
-
-template <typename T>
-inline GS_BOOL GsFloatEqual(T x, T y)
-{
-    T delta = x - y;
-    return -GS_FLOAT_DELTA < delta && delta < GS_FLOAT_DELTA;
-}
-
-template <typename T>
-inline GS_INT Float2Int(T value)
-{
-    return (GS_INT)((value < 0.0)? (value - 0.5): (value + 0.5));
-}
-
-//===========================================================================
-
-inline GS_BYTE Int2Byte(GS_INT value)
-{
-    return (value < 0)? 0: ((value > 0xFF)? 0xFF: (GS_BYTE)value);
-}
-
-inline GS_INT RoundDiv(GS_INT dividend , GS_INT divisor)
-{
-    return (dividend + (divisor >> 1)) / divisor;
-}
 
 //===========================================================================
 

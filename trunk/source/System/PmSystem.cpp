@@ -157,25 +157,15 @@ PmIO::IO_KEY PmSystem::GetInnerKey(PM_KEY key) const
 {
     switch (key)
     {
-    case PM_KEY_A:
-        return PmIO::IO_KEY_A;
-    case PM_KEY_B:
-        return PmIO::IO_KEY_B;
-    case PM_KEY_C:
-        return PmIO::IO_KEY_C;
-    case PM_KEY_UP:
-        return PmIO::IO_KEY_UP;
-    case PM_KEY_DOWN:
-        return PmIO::IO_KEY_DOWN;
-    case PM_KEY_LEFT:
-        return PmIO::IO_KEY_LEFT;
-    case PM_KEY_RIGHT:
-        return PmIO::IO_KEY_RIGHT;
-    case PM_KEY_POWER:
-        return PmIO::IO_KEY_POWER;
-    case PM_KEY_NONE:
-    default:
-        return PmIO::IO_KEY_NONE;
+    case PM_KEY_A:     return PmIO::IO_KEY_A;
+    case PM_KEY_B:     return PmIO::IO_KEY_B;
+    case PM_KEY_C:     return PmIO::IO_KEY_C;
+    case PM_KEY_UP:    return PmIO::IO_KEY_UP;
+    case PM_KEY_DOWN:  return PmIO::IO_KEY_DOWN;
+    case PM_KEY_LEFT:  return PmIO::IO_KEY_LEFT;
+    case PM_KEY_RIGHT: return PmIO::IO_KEY_RIGHT;
+    case PM_KEY_POWER: return PmIO::IO_KEY_POWER;
+    default:           return PmIO::IO_KEY_NONE;
     }
 }
 

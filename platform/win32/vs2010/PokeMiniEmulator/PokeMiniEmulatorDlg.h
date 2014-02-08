@@ -45,8 +45,8 @@ private:
 
     BOOL OnKeyUp(MSG* pMsg);
     BOOL OnKeyDown(MSG* pMsg);
-    GS_VOID OnOpen();
-    GS_VOID OnClose();
+    GS_VOID OnRomOpen();
+    GS_VOID OnRomClose();
 
 private:
     static DWORD WINAPI EmuThread(LPVOID lpThreadParameter);

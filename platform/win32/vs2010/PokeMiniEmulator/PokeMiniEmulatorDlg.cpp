@@ -142,11 +142,11 @@ BOOL CPokeMiniEmulatorDlg::OnInitDialog()
 
 void CPokeMiniEmulatorDlg::OnCancel()
 {
-    OnClose();
+    OnRomClose();
     SafeFreePointer(m_screenDev.pData);
     SafeFreePointer(m_dev[1].pData);
     SafeFreePointer(m_dev[0].pData);
-    SafeDeletePointer(m_pSystem);
+    GsReleasePokeMiniEmuHandle(m_pSystem);
 
     if (GS_NULL != m_pDirectSoundBuffer) { m_pDirectSoundBuffer->Release(); }
     if (GS_NULL != m_pDirectSound) { m_pDirectSound->Release(); }
@@ -352,7 +352,7 @@ BOOL CPokeMiniEmulatorDlg::OnKeyDown(MSG* pMsg)
     switch (pMsg->wParam)
     {
     case 'Q':
-        OnOpen();
+        OnRomOpen();
         return TRUE;
     case 'W':
         if (EMU_RUN == m_state)
@@ -412,9 +412,9 @@ BOOL CPokeMiniEmulatorDlg::OnKeyDown(MSG* pMsg)
     return FALSE;
 }
 
-GS_VOID CPokeMiniEmulatorDlg::OnOpen()
+GS_VOID CPokeMiniEmulatorDlg::OnRomOpen()
 {
-    OnClose();
+    OnRomClose();
 
     {
         CFileDialog fileDialog(TRUE, _T("*.min"), NULL, OFN_ALLOWMULTISELECT|OFN_HIDEREADONLY|OFN_EXPLORER, _T("pokemon mini rom(*.min)|*.min"));
@@ -446,7 +446,7 @@ GS_VOID CPokeMiniEmulatorDlg::OnOpen()
     }
 }
 
-GS_VOID CPokeMiniEmulatorDlg::OnClose()
+GS_VOID CPokeMiniEmulatorDlg::OnRomClose()
 {
     if (EMU_STOP != m_state)
     {
